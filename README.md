@@ -1,8 +1,3 @@
-# Agents
-# Agentic AI Projects
-
-A collection of AI-powered tools built with React and the Anthropic Claude API. Each project demonstrates practical applications of agentic AI — systems that reason, extract, and act on real-world inputs rather than simply responding to prompts.
-
 ---
 
 ## Bürokratik — German Bureaucracy Tracker

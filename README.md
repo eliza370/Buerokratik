@@ -1,12 +1,10 @@
----
-
-## Bürokratik — German Bureaucracy Tracker
+# Bürokratik — German Bureaucracy Tracker
 
 Germany runs on paperwork. Bürokratik helps you track it.
 
 A document management tool for navigating German bureaucracy — from Anmeldung and health insurance to Finanzamt deadlines and rental agreements. Built for anyone living or working in Germany who needs to stay on top of official documents and deadlines.
 
-### What makes it agentic
+## What makes it agentic
 
 The app uses Claude to do real work, not just answer questions:
 
@@ -14,7 +12,7 @@ The app uses Claude to do real work, not just answer questions:
 - **Upload a PDF or image** — same extraction from a scan or photo of an official document
 - **Add manually** — Claude generates contextual next steps based on the document category and your notes
 
-### Features
+## Features
 
 - 10 document categories covering the most common German bureaucracy touchpoints: Mietvertrag, Anmeldung, Krankenversicherung, Finanzamt, Jobcenter, Aufenthaltstitel, Versicherung, Rundfunkbeitrag, Rentenversicherung, and general documents
 - Color-coded urgency system: Overdue, Urgent (≤7 days), Due soon (≤30 days), Active, Ongoing, Closed
@@ -23,22 +21,28 @@ The app uses Claude to do real work, not just answer questions:
 - Mark complete, reopen, or delete documents
 - Persistent storage via localStorage
 
-### Tech stack
+## Tech stack
 
 - React + Vite
 - Anthropic Claude API (`claude-sonnet-4-20250514`)
 - Vanilla CSS (no UI library)
 
-### Running locally
+## Running locally
 
 ```bash
 git clone https://github.com/Eliza370/Agents.git
-cd YOUR_REPO_NAME/buerokratik
+cd Agents/buerokratik
 npm install
 npm run dev
 ```
 
-The app calls the Anthropic API directly from the browser. You will need a valid Anthropic API key added to the fetch headers in `src/App.jsx` for the AI features to work.
+Copy `.env.example` to `.env` and add your Anthropic API key:
+
+```
+VITE_ANTHROPIC_API_KEY=your_key_here
+```
+
+> **Note:** The app calls the Anthropic API directly from the browser. Some browsers will block this with a CORS error in local development. A simple workaround is to use the Vite dev server with a proxy, or test via a deployed environment.
 
 ---
 

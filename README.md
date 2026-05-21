@@ -29,6 +29,8 @@ The app uses Claude to do real work, not just answer questions:
 
 ## Running locally
 
+Requires [Node.js](https://nodejs.org/) v18 or higher.
+
 ```bash
 git clone https://github.com/Eliza370/Agents.git
 cd Agents/buerokratik
@@ -42,7 +44,7 @@ Copy `.env.example` to `.env` and add your Anthropic API key:
 VITE_ANTHROPIC_API_KEY=your_key_here
 ```
 
-> **Note:** The app calls the Anthropic API directly from the browser. Some browsers will block this with a CORS error in local development. A simple workaround is to use the Vite dev server with a proxy, or test via a deployed environment.
+> **API calls:** The app routes requests to the Anthropic API through Vite's dev server proxy, which handles CORS automatically. As long as you're running `npm run dev` with a valid key in your `.env`, it will work out of the box.
 
 ---
 

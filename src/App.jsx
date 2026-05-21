@@ -63,7 +63,7 @@ const EXTRACT_SYS = `You are a German bureaucracy document analyzer. Return ONLY
 const STEPS_SYS = `You are a German bureaucracy expert. Return ONLY a JSON array of 2-4 specific English next steps: ["Step 1","Step 2"]. No other text.`;
 
 const callClaude = async (messages, system) => {
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
+  const res = await fetch("/api/claude", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
